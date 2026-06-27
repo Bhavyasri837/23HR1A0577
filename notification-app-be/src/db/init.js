@@ -16,9 +16,9 @@ export async function initDB() {
         INDEX idx_created (created_at)
       )
     `);
-    await Log("backend", "info", "db", "MySQL tables initialized successfully");
+    await Log("backend", "info", "db", "tables created ok");
   } catch (err) {
-    await Log("backend", "fatal", "db", `MySQL init failed: ${err.message}`);
+    await Log("backend", "fatal", "db", "init failed");
     throw err;
   }
 }
